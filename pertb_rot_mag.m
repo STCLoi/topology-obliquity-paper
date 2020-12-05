@@ -24,26 +24,26 @@ clear
 
 %% USER-DEFINED PARAMETERS
    
-n = -16;               % Eckart radial order of the mode we wish to consider
+n = -31;               % Eckart radial order of the mode we wish to consider
                        % (N.B. up to the user to ensure this is present in 
                        % the loaded file containing the eigenfunctions)
 l = 1;                 % SH degree (currently available: l=0,1,2,3)
 beta = pi/4;           % obliquity angle
-Omega = 0.01;          % rotation frequency (fraction of dynamical freq)
+Omega = 0.002;          % rotation frequency (fraction of dynamical freq)
 
 % File containing the unperturbed eigenfunctions
-modesInFile = ['modes_MESA_2Msun_profile26_l' num2str(l) '.mat'];
+modesInFile = ['modes_n4.2poly_l' num2str(l) '.mat'];
 
 % Magnetic field parameters
-vAcen = 2e-4;          % central Alfven speed (fraction of dynamical speed)
-Rfield = 0.012;          % radial extent of the field region
+vAcen = 1e-4;          % central Alfven speed (fraction of dynamical speed)
+Rfield = 0.1;          % radial extent of the field region
 min_lam = 0;           % lower search bound for lambda
-max_lam = 10000;         % upper search bound
+max_lam = 1000;         % upper search bound
 dlam = 2;            % search resolution
 lamOrder = 1;          % complexity order of the field solution desired
 
 % Turn on plotting?
-wantPlots = false;
+wantPlots = true;
 
 %% LOAD UNPERTURBED EIGENFUNCTION(S)
 
@@ -359,7 +359,7 @@ for i = 1:2*l+1
 end
 
 if wantPlots
-    load cmaps
+    load RBcmap
     
     % Plot frequency shifts in corotating frame for all modes
     figure, set(gcf, 'Position', [1800 300 1670 450])
