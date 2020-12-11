@@ -280,10 +280,10 @@ for j = 1:length(orders)
         
         if abs(det(double(reorder))) > eps
             % Only actually reorder if this is unique
-            a_j = a_j * reorder;
+            a_j = a_j * reorder';
         
             % Swap around entries of om1_j accordingly
-            om1_j = diag(reorder * diag(om1_j));
+            om1_j = diag(reorder' * diag(om1_j));
         end
         
         a_all(:,:,j) = a_j;
