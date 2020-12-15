@@ -25,4 +25,5 @@ SUMMARY OF CONTENTS
     * plot_Prendergast.m - code for visualising the magnetic field (not called by any of the above, just a handy function)
 4. Data files
     * modes_n4.2poly_l1.mat - an example file containing the basic eigenmodes of a polytropic model with index 4.2 (Model A in the paper); this is of the format required by pertb_rot_mag.m
+    * modes_MESA_2Msun_profile26_l1.mat - another example file, this time for a 2-solar mass subgiant star computed by MESA (Model C in the paper)
     * RBcmaps.mat - contains a custom colour map used by pertb_rot_mag.m to generate red/blue output diagrams
