@@ -1,6 +1,6 @@
 CONTEXT
 --------------------
-The codes and data in this repository were created in relation to the paper "Topology and obliquity of core magnetic fields in shaping seismic properties of slowly rotating evolved stars", by Shyeh Tjing Loi, which is currently in preparation and will be submitted to the peer-reviewed journal Monthly Notices of the Royal Astronomical Society.
+The codes and data in this repository were created in relation to the paper "Topology and obliquity of core magnetic fields in shaping seismic properties of slowly rotating evolved stars", by Shyeh Tjing Loi, which has been submitted and is currently undergoing peer-review by the journal Monthly Notices of the Royal Astronomical Society.
 
 The goal of the study was to investigate the combined effects of rotation and a magnetic field on the frequencies of natural oscillation modes of stars, using first-order perturbation theory. The main codes in this repository can be subdivided into two groups:
 1. Those that calculate the basic eigenmodes of the star in the absence of rotation and magnetism, and
