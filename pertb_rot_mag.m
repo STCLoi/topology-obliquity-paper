@@ -266,7 +266,7 @@ for j = 1:length(orders)
         intgnd_rot_jj = repmat(rho, nPts_th, 1) .* Omega .* ...
             imag(xiph_j .* (conj(xith_j) .* cos(Mth) + conj(xir_j) .* sin(Mth)));
         
-        Mmag_j(i,i) = 0.5/om_n/xidotxi_j * sum(sum(intgnd_mag_jj .* dV));
+        Mmag_j(i,i) = 0.5/frequencies(j)/xidotxi_j * sum(sum(intgnd_mag_jj .* dV));
         Mrot_j(i,i) = 2/xidotxi_j * sum(sum(intgnd_rot_jj .* dV));
         [a_j, om1_j] = eig(Mrot_j + dmm * Mmag_j * dmm');
         
