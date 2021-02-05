@@ -20,7 +20,7 @@ j = size(soln,1)^backwd;
 soln(j,:) = BC;
 pm1 = (-1)^backwd;
 
-for i = i_start+2*pm1 : 2*pm1 : i_end
+for i = i_start : 2*pm1 : i_end-2*pm1
     soln(j+pm1,:) = RK4(soln(j,:), pm1, i, pm1*dr, RHSfunc);
     j = j + pm1;
 end
